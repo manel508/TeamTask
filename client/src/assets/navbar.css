@@ -1,0 +1,124 @@
+.navbar-container {
+    background: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #e0e6ed;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .app-title {
+    color: #4a5568;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .app-title span {
+    color: #4299e1;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-container:hover .app-title span {
+    color: #3182ce;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  
+  .nav-link {
+    color: #4a5568;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    background: #ebf8ff;
+    color: #3182ce;
+    transform: translateY(-2px);
+  }
+  
+  .nav-link:hover .nav-icon {
+    transform: scale(1.1);
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #3182ce;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: calc(100% - 2rem);
+  }
+  
+  .nav-icon {
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .logout-button {
+    background: #fed7d7;
+    color: #e53e3e;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .logout-button:hover {
+    background: #feebeb;
+    color: #c53030;
+    transform: translateY(-2px);
+  }
+  
+  .logout-button .nav-icon {
+    color: #e53e3e;
+  }
+  
+  .logout-button:hover .nav-icon {
+    transform: scale(1.1);
+    color: #c53030;
+  }
+  
+  /* Micro-interactions */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .nav-links > * {
+    animation: fadeIn 0.4s ease forwards;
+  }
+  
+  .nav-links > *:nth-child(1) { animation-delay: 0.1s; }
+  .nav-links > *:nth-child(2) { animation-delay: 0.2s; }
+  .nav-links > *:nth-child(3) { animation-delay: 0.3s; }
+  .nav-links > *:nth-child(4) { animation-delay: 0.4s; }
